@@ -6,7 +6,7 @@ public class App {
     private Employee[] employees = new Employee[100];
     public void run(){
         boolean repeat = true;
-        System.out.println("Отдео кадров");
+        System.out.println("Отдел кадров");
         System.out.println("------------------");
         do {
             System.out.println("Спиоск задач");
@@ -14,6 +14,7 @@ public class App {
             System.out.println("1. Добавить Работника");
             System.out.println("2. Список Работников");
             System.out.println("3. Работник по имени и фамилии");
+            System.out.println("4. Редактировать запись");
             System.out.println("Выберите действие");
             Scanner scanner = new Scanner(System.in);
             int task = scanner.nextInt();
@@ -70,6 +71,9 @@ public class App {
                         }
                     }
                     break;
+                case 4:
+                    System.out.println("Редактировать запись");
+                    break;
                 default:
                     System.out.println("Нет такого действия");
                     break;
@@ -79,44 +83,6 @@ public class App {
         System.out.println("Bye!");
 
 
-
-//        Address address = new Address();
-//        address.setCity("Йыхви");
-//        address.setState("Ида-Вирумаа");
-//        address.setZip("41536");
-//        address.setStreet("Нарвское шоссе");
-//        address.setHouse("80");
-//        address.setRoom("20");
-//
-//        Person person = new Person("Ivan","Ivanov", address,10,10,2000);
-//        Employee employee = new Employee(person, "слесорь", "3000");
-//        System.out.printf("Наш работник%nИмя: %s,%n Фамилия %s,%n должность: %s,%n возраст: %d,%n зарплата: %s.%n Проживает по адресу: %s, %s, %s, %s - %s",
-//                employee.getPerson().getName(),
-//                employee.getPerson().getSurname(),
-//                employee.getAppointment(),
-//                employee.getPerson().age(),
-//                employee.getSalary(),
-//                employee.getPerson().getAddress().getState(),
-//                employee.getPerson().getAddress().getCity(),
-//                employee.getPerson().getAddress().getStreet(),
-//                employee.getPerson().getAddress().getHouse(),
-//                employee.getPerson().getAddress().getRoom()
-//        );
-//
-//        Person person2 = new Person("Oleg", "Petrov", address, 15, 5, 1995);
-//        Employee employee2 = new Employee(person2, "Электрослесарь", "4000");
-//        System.out.printf("%nНаш работник%nИмя: %s,%n Фамилия %s,%n должность: %s,%n возраст: %d,%n зарплата: %s.%n Проживает по адресу: %s, %s, %s, %s - %s",
-//                employee2.getPerson().getName(),
-//                employee2.getPerson().getSurname(),
-//                employee2.getAppointment(),
-//                employee2.getPerson().age(),
-//                employee2.getSalary(),
-//                employee2.getPerson().getAddress().getState(),
-//                employee2.getPerson().getAddress().getCity(),
-//                employee2.getPerson().getAddress().getStreet(),
-//                employee2.getPerson().getAddress().getHouse(),
-//                employee2.getPerson().getAddress().getRoom()
-//        );
     }
 
     private void createEmployee() {
@@ -127,13 +93,13 @@ public class App {
         String surname = scanner.nextLine();
         System.out.println("Введите год рождения");
         int birthYear = scanner.nextInt();
-        scanner.nextLine(); // consume the newline
+        scanner.nextLine();
         System.out.println("Введите месяц рождения");
         int birthMonth = scanner.nextInt();
-        scanner.nextLine(); // consume the newline
+        scanner.nextLine();
         System.out.println("Введите день рождения");
         int birthDay = scanner.nextInt();
-        scanner.nextLine(); // consume the newline
+        scanner.nextLine();
         System.out.println("Введите город");
         String city = scanner.nextLine();
         System.out.println("Введите улицу");
